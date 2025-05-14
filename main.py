@@ -124,4 +124,7 @@ async def default_text_handler(message: Message):
 
 # Запуск бота
 if __name__ == "__main__":
-    dp.run_polling(bot)
+    # add timeout for long polling
+    timeout = 30
+    # dp.run_polling(bot)
+    dp.run_polling(bot, timeout=timeout)
